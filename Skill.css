@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #150533; 
+    color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    padding: 10px 10%;
+    display: flex;
+    color: white;
+}
+
+nav { 
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    margin: 20px;
+    top: 0;
+    right: 20px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+nav ul.show {
+    display: flex;
+    flex-direction: column; 
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none; /* Initially hide the hamburger icon */
+    cursor: pointer;
+    font-size: 24px;
+    color: white;    
+}
+
+.skills-container {
+    display: flex;
+    box-sizing: border-box;
+    padding: 20px;
+    justify-content: space-around; /* Space items evenly */
+    align-items: center; /* Center items */
+}
+
+.skill-item {
+    background-color: #323A3A; /* Background color for the boxes */
+    height: auto; /* Allow height to adjust based on content */
+    width: 400px; /* Default width for larger screens */
+    max-width: 100%; /* Prevent overflow on small screens */
+    padding: 20px; 
+    margin: 30px; /* Space between items */
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.skill {
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.skill h2 {
+    padding: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+.skill-item img {
+    width: 100%; /* Make image responsive */
+    height: auto;    
+}
+
+.prog {
+   text-align: center;
+   margin-top: 20px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color:#4b4646;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transition: translateY(-5px);
+}
+
+footer {
+    text-align: center;
+    gap: 10px;
+    background: #c4bfbf;
+    padding: 10px;
+}
+
+footer p {
+    color: black;    
+}
+
+/* Mobile & Tablet Adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide by default */
+        flex-direction: column; 
+        width: 100%;
+        background: #333; 
+        position: absolute; 
+        top: 60px; 
+        left: 0; 
+    }
+
+    nav ul.show {
+        display: flex; /* Show when active */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon */
+    }
+
+    .container {
+        padding: 10px; 
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .skills-container {
+        flex-direction: column; /* Change to column layout on mobile */
+        padding: 0; 
+        align-items: center; /* Center items horizontally */
+    }
+
+   .skill-item {
+       width: calc(50% - 40px); /* Two items per row with some margin */
+       margin-bottom: 20px; /* Space between rows */
+       flex-grow: 1; /* Allow items to grow and fill space */
+       max-width: none; /* Remove max-width for flexibility */
+       box-sizing: border-box; /* Include padding in width calculation */
+   }
+
+   .skill-item:nth-child(odd) { /* First two items in one row */
+       margin-right: 20px; /* Add some space to the right of the first item */
+   }
+
+   footer {
+       padding: 15px; 
+   }
+}
+/* Extra Small Devices */
+@media (max-width: 500px) {
+    nav ul li a {
+        font-size: 16px; 
+    }
+    
+    .skill-item {
+        padding: 15px; 
+        margin-left: 0; /* Reset margin for small screens */
+        margin-right: 0; /* Reset margin for small screens */
+        width: calc(100% - 40px); /* Full width on extra small devices */
+        height: auto; /* Ensure height adjusts based on content */
+    }
+ }
+ 
