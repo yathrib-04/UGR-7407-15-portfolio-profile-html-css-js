@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins' sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color:#150533; 
+    color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+.container{
+    padding: 10px 10%;
+    display: flex;
+    color: white;
+}
+nav{ 
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    margin: 20px;
+    top: 0;
+    right: 20px;;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.hamburger {
+    display: none; /* Initially hide the hamburger icon */
+    cursor: pointer;
+    font-size: 24px;
+    color: white;    
+}
+
+.footer {
+    padding: 50px;
+    margin-top: 100px;
+    background-color: dimgray;
+    text-align: center;
+}
+.row {
+    display: flex;
+    margin: 40px 200px 40px 200px;
+    text-align: center;
+}
+
+.container2 h1{
+    text-align: center;
+    padding: 100px;
+}
+.contact-left{
+    flex-basis: 40%;
+    margin: 20px;
+    justify-items: flex-start;
+}
+.contact-right{
+    flex-basis: 60%;
+    justify-items: flex-start;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons {
+    margin-top: 30px;
+
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a :hover{
+    color: #ff004f;
+    transition: translateY(-5px);
+
+}
+.btn{
+    display: inline-block;
+    background: #ff004f;
+    
+
+}
+.contact-right form{
+    width: 100%;
+
+
+}
+form input ,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #f1ecec;
+    padding: 15px;
+    margin: 15px 0;
+    color:black;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn{
+    padding:15px;
+    font-size:18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.social-icon {
+    margin-top: 30px;
+
+}
+.social-icon a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color:#4b4646;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icon a :hover{
+    color: #ff004f;
+    transition: translateY(-5px);
+}
+footer{
+    text-align: center;
+    gap: 10px;
+    background: #c4bfbf;
+    padding: 5px;
+}
+footer p{
+    color: black;
+}
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    
+    .hamburger {
+        display: block; /* Show hamburger icon on mobile */
+        
+    }
+    nav ul.show {
+        display: flex; /* Show when active */
+    }   
+    nav ul {
+        display: none;
+    }
+
+    .row {
+        flex-direction: column; /* Stack contact-left and contact-right on mobile */
+        align-items: center; /* Center align items */
+        margin-left: auto; /* Centering */
+        margin-right: auto; /* Centering */
+        width: 100%; /* Full width on mobile */
+        padding-left: 0; /* Reset padding */
+        padding-right: 0; /* Reset padding */
+        gap: 20px; /* Add gap between stacked elements */
+      }
+
+      .contact-left,
+      .contact-right {
+          flex-basis: auto; /* Reset flex-basis to auto for stacking */
+          width: 90%; /* Make them full width with some margin */
+      }
+      @media (min-width: 769px) {
+        .hamburger {
+            display: none; /* Hide hamburger icon on larger screens */
+        }      
+}
+
+}
